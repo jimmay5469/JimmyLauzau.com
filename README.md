@@ -17,6 +17,7 @@ Deploying
 ---------
 1. Log into Heroku `heroku login`.
 2. Run `git push prod master`.
-Setup:
-*Install [Heroku Toolbelt](https://toolbelt.heroku.com/).
-*Run `git remote add prod [url]`.
+
+######Deployment Setup:
+* Install [Heroku Toolbelt](https://toolbelt.heroku.com/).
+* Run `git remote add prod [url]`.
