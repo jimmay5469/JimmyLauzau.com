@@ -10,12 +10,13 @@ Setup
 
 Running
 -------
-* Node: Run `npm start`.
-* Browser: Visit `http://localhost:[port]/`.
+1. Node: Run `npm start`.
+2. Browser: Visit `http://localhost:[port]/`.
 
 Deploying
 ---------
-* Setup: Install [Heroku Toolbelt](https://toolbelt.heroku.com/).
-* Setup: `git remote add prod [url]`.
-* Log into Heroku `heroku login`.
-* Run `git push prod master`.
+1. Log into Heroku `heroku login`.
+2. Run `git push prod master`.
+Setup:
+*Install [Heroku Toolbelt](https://toolbelt.heroku.com/).
+*Run `git remote add prod [url]`.
