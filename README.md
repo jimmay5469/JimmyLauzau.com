@@ -10,8 +10,8 @@ Setup
 
 Running
 -------
-1. Node: Run `npm start`.
-2. Browser: Visit `http://localhost:[port]/`.
+1. Run `npm start`.
+2. Visit `http://localhost:[port]/`.
 
 Unit Testing
 -------
