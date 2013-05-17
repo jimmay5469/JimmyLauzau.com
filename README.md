@@ -1,4 +1,4 @@
-JimmyLauzau.com
+JimmyLauzau.com [![Build Status](https://drone.io/github.com/jimmay5469/JimmyLauzau.com/status.png)](https://drone.io/github.com/jimmay5469/JimmyLauzau.com/latest)
 ===============
 My personal website.
 
