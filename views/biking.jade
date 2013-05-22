@@ -1,0 +1,32 @@
+extends layout
+
+block content
+	.navbar.navbar-static-top.navbar-inverse
+		.navbar-inner
+			a.brand(href='/') JimmyLauzau.com
+			ul.nav
+				li
+					a(href='/') Home
+				li.active
+					a(href='/biking') Biking
+	.container(ng-app='myApp', ng-controller='activitiesCtrl')
+		h1 Biking
+		h3 Where I Ride
+			small.muted(ng-hide='activities.length')  (Loading Data...)
+		#map-canvas
+		div Data provided by 
+			a(href='http://connect.garmin.com/profile/jimmay5469') Garmin Connect
+			| .
+		div(ng-show='activities.length')
+			h3 Trails ({{activities.length}})
+			ul
+				li(ng-repeat='activity in activities') 
+					a(href='http://connect.garmin.com/activity/{{activity.activityId}}') {{activity.activityName}}
+					|  ({{activity.rideCount}}
+					span(ng-pluralize='', count='activity.rideCount', when="{'1':' ride','other':' rides'}")
+					|  logged)
+		br
+		script(src='http://maps.googleapis.com/maps/api/js?sensor=false&language=en')
+		script(src='/javascripts/angular.min.js')
+		script(src='/javascripts/biking.js')
+		style html, body, .container { height:100% } #map-canvas { height: 60%; width: 100%; } #map-canvas img { max-width: none; }
