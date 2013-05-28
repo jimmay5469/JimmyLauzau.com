@@ -41,27 +41,11 @@ components.directive('myMap', function() {
 });
 
 var app = angular.module('myApp', ['components']);
-
 function activitiesCtrl($scope, $http) {
 	$scope.activities = [];
 
 	$http.get('/bikingData').
-        success(function(data,status,headers,config) {
-        	data.activityList = data.activityList.reduce(function(res,obj) {
-        		if(obj.activityName) {
-					if(!(obj.activityName in res)) {
-						obj.rideCount = 1;
-						res.__array.push(res[obj.activityName] = obj);
-					} else {
-						res[obj.activityName].rideCount++;
-					}
-				}
-				return res;
-			}, {__array:[]}).__array;
-
-        	$scope.activities = data.activityList;
-        }).
-        error(function(data,status,headers,config) {
-            //alert('error loading data');
+        success(function(data) {
+        	$scope.activities = bikingDataFormatter.formatData(data.activityList);
         });
 }
