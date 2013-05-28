@@ -10,5 +10,10 @@ describe('bikingDataFormatter', function() {
 			var result = bikingDataFormatter.formatData([{activityName:'ride 1'},{activityName:'ride 2'}]);
 			assert.equal(result.length, 2);
 		});
+		it('should keep track of ride counts', function() {
+			var result = bikingDataFormatter.formatData([{activityName:'ride 1'},{activityName:'ride 1'},{activityName:'ride 2'}]);
+			assert.equal(result[0].rideCount, 2);
+			assert.equal(result[1].rideCount, 1);
+		});
 	});
 });
