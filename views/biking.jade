@@ -13,7 +13,7 @@ block content
 		h1 Biking
 		h3 Where I Ride
 			small.muted(ng-hide='activities.length')  (Loading Data...)
-		#map-canvas
+		.my-map(markers='activities')
 		div Data provided by 
 			a(href='http://connect.garmin.com/profile/jimmay5469') Garmin Connect
 			| .
@@ -29,4 +29,4 @@ block content
 		script(src='http://maps.googleapis.com/maps/api/js?sensor=false&language=en')
 		script(src='/javascripts/angular.min.js')
 		script(src='/javascripts/biking.js')
-		style html, body, .container { height:100% } #map-canvas { height: 60%; width: 100%; } #map-canvas img { max-width: none; }
+		style html, body, .container { height:100% } .my-map { height: 60%; width: 100%; } .my-map img { max-width: none; }
