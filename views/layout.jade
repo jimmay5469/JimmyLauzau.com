@@ -1,5 +1,5 @@
 doctype 5
-html
+html(ng-app='mainApp')
 	head
 		if (typeof(title) !== 'undefined')
 			title= title + ' - Jimmy Lauzau'
@@ -9,5 +9,12 @@ html
 		link(rel='stylesheet', href='/css/bootstrap.css')
 		link(rel='stylesheet', href='/css/bootstrap-responsive.css')
 		script(src='/js/googleAnalytics.js')
+		script(src='/js/angular.min.js')
+		script(src='http://maps.googleapis.com/maps/api/js?sensor=false&language=en')
+		script(src='/js/biking/dataFormatters.js')
+		script(src='/js/biking/viewComponents.js')
+		script(src='/js/biking/controllers.js')
+		script(src='/js/mainApp.js')
+		style html, body, .content, .container { height:100% }
 	body
-		block content
+		.content(ng-view)

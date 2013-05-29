@@ -2,7 +2,7 @@
 	exports.activitiesCtrl = function($scope, $http, dataFormatter) {
 		$scope.activities = [];
 
-		$http.get('/biking').
+		$http.get('/bikingData').
 	        success(function(data) {
 	        	$scope.activities = dataFormatter.formatBikingData(data.activityList);
 	        });
