@@ -1,7 +1,7 @@
 var assert = require("assert");
 
-var dataFormatters = require('./../public/javascripts/biking/dataFormatters.js');
-var ctrls = require('./../public/javascripts/biking/controllers.js');
+var dataFormatters = require('./../public/js/biking/dataFormatters.js');
+var ctrls = require('./../public/js/biking/controllers.js');
 
 describe('biking', function() {
 	describe('dataFormatters', function() {
