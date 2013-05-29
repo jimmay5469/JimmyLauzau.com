@@ -9,7 +9,7 @@ block content
 					a(href='/') Home
 				li.active
 					a(href='/biking') Biking
-	.container(ng-app='myApp', ng-controller='activitiesCtrl')
+	.container(ng-app='myApp', ng-controller='ctrls.activitiesCtrl')
 		h1 Biking
 		h3 Where I Ride
 			small.muted(ng-hide='activities.length')  (Loading Data...)
@@ -28,7 +28,8 @@ block content
 		br
 		script(src='http://maps.googleapis.com/maps/api/js?sensor=false&language=en')
 		script(src='/javascripts/angular.min.js')
-		script(src='/javascripts/bikingDataFormatter.js')
-		script(src='/javascripts/components.js')
-		script(src='/javascripts/biking.js')
+		script(src='/javascripts/biking/dataFormatters.js')
+		script(src='/javascripts/biking/viewComponents.js')
+		script(src='/javascripts/biking/controllers.js')
+		script(src='/javascripts/biking/myApp.js')
 		style html, body, .container { height:100% } .my-map { height: 60%; width: 100%; } .my-map img { max-width: none; }

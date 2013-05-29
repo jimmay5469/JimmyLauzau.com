@@ -1,5 +1,5 @@
 (function(exports) {
-	exports.formatData = function(data, callback) {
+	exports.formatBikingData = function(data, callback) {
 		return data.reduce(function(res,obj) {
 			if(obj.activityName) {
 				if(!(obj.activityName in res)) {
@@ -12,4 +12,4 @@
 			return res;
 		}, {__array:[]}).__array;
 	}
-})(typeof exports === 'undefined' ? this.bikingDataFormatter = {} : exports);
+})(typeof exports === 'undefined' ? this.dataFormatters = {} : exports);

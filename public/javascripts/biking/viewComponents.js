@@ -1,4 +1,4 @@
-var components = angular.module('components', []);
+var components = angular.module('viewComponents', []);
 components.directive('myMap', function() {
 	return {
 		restrict: 'ECA',
