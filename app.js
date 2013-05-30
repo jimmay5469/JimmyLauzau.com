@@ -1,5 +1,6 @@
 var express = require('express')
-  , routes = require('./routes')
+  , routes = require('./routes/index.js')
+  , api = require('./routes/api.js')
   , http = require('http')
   , path = require('path');
 
@@ -24,7 +25,7 @@ if ('development' == app.get('env')) {
 app.get('/', routes.layout.index);
 app.get('/home', routes.home.index);
 app.get('/biking', routes.biking.index);
-app.get('/bikingData', routes.bikingData.index);
+app.get('/api/bikeRides.json', api.bikeRides.list);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
