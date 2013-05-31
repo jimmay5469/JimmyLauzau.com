@@ -15,6 +15,15 @@ html(ng-app='mainApp')
 		script(src='/js/biking/viewComponents.js')
 		script(src='/js/biking/controllers.js')
 		script(src='/js/mainApp.js')
-		style html, body, .content, .container { height:100% }
+		style html, body, .container { height:100% }
 	body
-		.content(ng-view)
+		.navbar.navbar-static-top.navbar-inverse(ng-controller='navCtrl', ng-hide='location.path() == "/"')
+			.navbar-inner
+				a.brand(href='#/') JimmyLauzau.com
+				ul.nav
+					li(ng-class='{active: location.path() == "/"}')
+						a(href='#/') Home
+					li(ng-class='{active: location.path() == "/biking"}')
+						a(href='#/biking') Biking
+		.container(ng-view)
+		br

@@ -9,3 +9,7 @@ var app = angular.module('mainApp', ['viewComponents']).
 app.factory('dataFormatter', function() {
 	return dataFormatters;
 });
+
+function navCtrl($scope, $location) {
+	$scope.location = $location;
+}

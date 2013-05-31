@@ -1,26 +1,16 @@
-.navbar.navbar-static-top.navbar-inverse
-	.navbar-inner
-		a.brand(href='#/') JimmyLauzau.com
-		ul.nav
-			li
-				a(href='#/') Home
-			li.active
-				a(href='#/biking') Biking
-.container
-	h1 Biking
-	h3 Where I Ride
-		small.muted(ng-hide='activities.length')  (Loading Data...)
-	.my-map(markers='activities')
-	div Data provided by 
-		a(href='http://connect.garmin.com/profile/jimmay5469') Garmin Connect
-		| .
-	div(ng-show='activities.length')
-		h3 Trails ({{activities.length}})
-		ul
-			li(ng-repeat='activity in activities') 
-				a(href='http://connect.garmin.com/activity/{{activity.activityId}}') {{activity.activityName}}
-				|  ({{activity.rideCount}}
-				span(ng-pluralize='', count='activity.rideCount', when="{'1':' ride','other':' rides'}")
-				|  logged)
-	br
-	style .my-map { height: 60%; width: 100%; } .my-map img { max-width: none; }
+h1 Biking
+h3 Where I Ride
+	small.muted(ng-hide='activities.length')  (Loading Data...)
+.my-map(markers='activities')
+div Data provided by 
+	a(href='http://connect.garmin.com/profile/jimmay5469') Garmin Connect
+	| .
+div(ng-show='activities.length')
+	h3 Trails ({{activities.length}})
+	ul
+		li(ng-repeat='activity in activities') 
+			a(href='http://connect.garmin.com/activity/{{activity.activityId}}') {{activity.activityName}}
+			|  ({{activity.rideCount}}
+			span(ng-pluralize='', count='activity.rideCount', when="{'1':' ride','other':' rides'}")
+			|  logged)
+style .my-map { height: 60%; width: 100%; } .my-map img { max-width: none; }
