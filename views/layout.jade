@@ -8,16 +8,20 @@ html(ng-app='mainApp')
 		meta(name='viewport', content='width=device-width, initial-scale=1.0')
 		link(rel='stylesheet', href='/css/bootstrap.css')
 		link(rel='stylesheet', href='/css/bootstrap-responsive.css')
+		link(rel='stylesheet', href='/css/main.css')
 		script(src='/js/googleAnalytics.js')
-		script(src='/js/angular.min.js')
+		script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js')
+		//script(src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js')
+		script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.min.js')
+		//script(src='/js/angular.min.js')
 		script(src='http://maps.googleapis.com/maps/api/js?sensor=false&language=en')
 		script(src='/js/biking/dataFormatters.js')
 		script(src='/js/biking/viewComponents.js')
 		script(src='/js/biking/controllers.js')
 		script(src='/js/mainApp.js')
-		style html, body, .container { height:100% }
 	body
-		.navbar.navbar-static-top.navbar-inverse(ng-controller='navCtrl', ng-hide='location.path() == "/"')
+		#navbar-placeholder
+		.navbar.navbar-static-top.navbar-inverse(ng-controller='navCtrl', ng-hide='location.path() == "/"', ng-animate = "{show: 'slide-down', hide: 'slide-up'}")
 			.navbar-inner
 				a.brand(href='#/') JimmyLauzau.com
 				ul.nav
