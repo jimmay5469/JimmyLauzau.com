@@ -24,6 +24,8 @@ if ('development' == app.get('env')) {
 
 app.get('/', routes.layout.index);
 app.get('/home', routes.home.index);
+app.get('/apps', routes.apps.index);
+app.get('/connect', routes.connect.index);
 app.get('/biking', routes.biking.index);
 app.get('/api/bikeRides.json', api.bikeRides.list);
 

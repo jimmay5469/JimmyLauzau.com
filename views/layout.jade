@@ -12,24 +12,22 @@ html(id='ng-app', ng-app='mainApp')
 		script(src='/js/googleAnalytics.js')
 		//if lte IE 8
 			script(src='/js/json2.js')
-		script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js')
-		//script(src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js')
-		script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.min.js')
-		//script(src='/js/angular.min.js')
+		script(src='/js/angular.min.js')
 		script(src='http://maps.googleapis.com/maps/api/js?sensor=false&language=en')
 		script(src='/js/biking/dataFormatters.js')
 		script(src='/js/biking/viewComponents.js')
 		script(src='/js/biking/controllers.js')
 		script(src='/js/mainApp.js')
 	body
-		#navbar-placeholder
-		.navbar.navbar-static-top.navbar-inverse(ng-controller='navCtrl', ng-hide='location.path() == "/"', ng-animate = '{show: "slide-down", hide: "slide-up"}')
+		.navbar.navbar-static-top.navbar-inverse(ng-controller='navCtrl')
 			.navbar-inner
-				a.brand(href='#/') JimmyLauzau.com
+				a.brand(href='#/') Jimmy Lauzau
 				ul.nav
 					li(ng-class='{active: location.path() == "/"}')
 						a(href='#/') Home
-					li(ng-class='{active: location.path() == "/biking"}')
-						a(href='#/biking') Biking
+					li(ng-class='{active: location.path() == "/apps"}')
+						a(href='#/apps') Apps
+					li(ng-class='{active: location.path() == "/connect"}')
+						a(href='#/connect') Connect
 		.container(ng-view)
 		br

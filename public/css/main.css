@@ -11,13 +11,3 @@ html, body {
 .my-map img {
 	max-width: none;
 }
-
-#navbar-placeholder {
-	background:#222;
-	height:5px;
-	position: absolute;
-	top: 0px;
-	left: 0px;
-	right: 0px;
-	z-index: -1;
-}
