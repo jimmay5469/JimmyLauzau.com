@@ -7,4 +7,4 @@
 	        	$scope.activities = dataFormatter.formatBikingData(data.activityList);
 	        });
 	}
-})(typeof exports === 'undefined' ? this.ctrls = {} : exports);
+})(typeof exports === 'undefined' ? (typeof this.ctrls === 'undefined' ? this.ctrls = {} : this.ctrls) : exports);
