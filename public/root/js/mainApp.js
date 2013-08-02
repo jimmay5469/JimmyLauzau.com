@@ -1,5 +1,6 @@
 var app = angular.module('mainApp', ['viewComponents']).
-	config(function($routeProvider) {
+	config(function($routeProvider, $locationProvider) {
+		$locationProvider.html5Mode(true).hashPrefix('!');
 		$routeProvider.
 			when('/', {controller: ctrls.homeCtrl, templateUrl:'/home.html'}).
 			when('/apps', {controller: ctrls.appsCtrl, templateUrl:'/apps.html'}).
