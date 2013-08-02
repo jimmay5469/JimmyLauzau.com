@@ -1,4 +1,8 @@
 (function(exports) {
+	exports.appsCtrl = function($scope) {
+	}
+	exports.connectCtrl = function($scope) {
+	}
 	exports.homeCtrl = function($scope) {
 		$scope.links = [
 			{title:'GitHub', url:'https://github.com/jimmay5469', target:'_blank'},

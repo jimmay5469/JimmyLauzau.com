@@ -1,0 +1,12 @@
+<h1>Biking</h1>
+<h3>Where I Ride<small ng-hide="activities.length" class="muted"> (Loading Data...)</small></h3>
+<div markers="activities" class="my-map"></div>
+<div>Data provided by <a href="http://connect.garmin.com/profile/jimmay5469">Garmin Connect</a>.</div>
+<div ng-show="activities.length">
+  <h3>Trails ({{activities.length}})</h3>
+  <ul>
+    <li ng-repeat="activity in activities">
+      <a href="http://connect.garmin.com/activity/{{activity.activityId}}">{{activity.activityName}}</a> ({{activity.rideCount}}<span ng-pluralize="" count="activity.rideCount" when="{'1':' ride','other':' rides'}"></span> logged)
+    </li>
+  </ul>
+</div>
