@@ -1,6 +1,6 @@
 {
-  "name": "application-name",
-  "version": "0.0.1",
+  "name": "JimmyLauzau.com",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "start": "node app.js",
@@ -8,7 +8,6 @@
   },
   "dependencies": {
     "express": "3.2.4",
-    "jade": "*",
     "request": "*"
   },
   "devDependencies": {
