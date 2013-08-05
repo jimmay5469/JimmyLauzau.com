@@ -21,6 +21,10 @@ if ('development' == app.get('env')) {
 }
 
 app.get('/api/apps/myRides/bikeRides.json', myRidesApi.bikeRides.list);
+app.get('/', function(req, res) { res.sendfile(__dirname + '/public/root/index.html'); });
+app.get('/apps', function(req, res) { res.sendfile(__dirname + '/public/root/index.html'); });
+app.get('/connect', function(req, res) { res.sendfile(__dirname + '/public/root/index.html'); });
+app.get('/apps/myRides', function(req, res) { res.sendfile(__dirname + '/public/root/index.html'); });
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
